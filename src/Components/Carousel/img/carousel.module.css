@@ -1,0 +1,44 @@
+.card {
+  background: white;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 12px 0;
+}
+
+.imgWrapper {
+  flex: 1;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.shopNow {
+  color: #007185;
+  font-size: 14px;
+  margin: 0;
+}
+
+.cardLink:hover .shopNow {
+  color: #c7511f;
+  text-decoration: underline;
+}

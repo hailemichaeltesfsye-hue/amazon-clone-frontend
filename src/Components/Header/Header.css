@@ -1,0 +1,300 @@
+.header {
+  background-color: #131921;
+  color: white;
+}
+
+.fixed {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+}
+
+.header-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 6px 10px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.header-link:hover {
+  border-color: white;
+}
+
+/* Logo */
+.logo-link {
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  line-height: 1;
+  text-align: center;
+}
+
+.logo-smile {
+  width: 60px;
+  display: block;
+  margin: 2px auto 0;
+}
+
+/* Delivery */
+.delivery {
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.delivery-icon {
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+
+.delivery-text {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.delivery-text p {
+  color: #ccc;
+  margin: 0;
+}
+
+.delivery-text span {
+  font-weight: bold;
+  color: white;
+}
+
+/* Search bar */
+.search-bar {
+  flex: 1;
+  display: flex;
+  height: 40px;
+  border-radius: 4px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.search-select {
+  background-color: #f3f3f3;
+  color: black;
+  font-size: 12px;
+  padding: 0 8px;
+  border: none;
+  border-right: 1px solid #cacaca;
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0 12px;
+  color: black;
+  border: none;
+  outline: none;
+}
+
+.search-button {
+  background-color: #febd69;
+  border: none;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.search-button:hover {
+  background-color: #f3a847;
+}
+
+/* Right side */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.language {
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.flag-img {
+  width: 20px;
+  display: block;
+}
+
+.lang-text {
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.small-text {
+  font-size: 12px;
+  margin: 0;
+}
+
+.bold-text {
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+/* Cart */
+.cart {
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  gap: 4px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -2px;
+  left: 16px;
+  color: #f3a847;
+  font-weight: bold;
+  font-size: 16px;
+  min-width: 16px;
+  text-align: center;
+}
+
+.cart-text {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* ===== Responsive ===== */
+
+/* Tablet: search bar drops to its own full row */
+@media (max-width: 900px) {
+  .header-wrapper {
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .logo-link {
+    order: 1;
+  }
+
+  .delivery {
+    order: 2;
+  }
+
+  .header-right {
+    order: 3;
+    margin-left: auto;
+  }
+
+  .search-bar {
+    order: 4;
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/* Large phone: hide delivery/language, keep essentials on one row + search below */
+@media (max-width: 600px) {
+  .header-wrapper {
+    padding: 8px;
+  }
+
+  .delivery,
+  .language,
+  .orders {
+    display: none;
+  }
+
+  .cart-text {
+    display: none;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .logo-smile {
+    width: 45px;
+  }
+
+  .header-link {
+    padding: 6px 8px;
+  }
+
+  .cart {
+    padding: 6px 10px;
+  }
+
+  .header-right {
+    gap: 2px;
+  }
+}
+
+/* Small phone */
+@media (max-width: 400px) {
+  .header-wrapper {
+    padding: 6px;
+    gap: 4px;
+  }
+
+  .small-text,
+  .bold-text {
+    font-size: 11px;
+  }
+
+  .header-link {
+    padding: 4px 6px;
+  }
+
+  .search-input {
+    font-size: 13px;
+  }
+
+  .search-button {
+    padding: 0 10px;
+  }
+
+  .logo-text {
+    font-size: 17px;
+  }
+
+  .logo-smile {
+    width: 36px;
+  }
+
+  .cart svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .cart-count {
+    font-size: 14px;
+    left: 13px;
+  }
+}

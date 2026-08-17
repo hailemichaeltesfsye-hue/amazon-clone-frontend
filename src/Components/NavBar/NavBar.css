@@ -1,0 +1,66 @@
+.navbar {
+  background-color: #232f3e;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 6px 16px;
+  position: relative;
+}
+
+.nav-link {
+  color: white;
+  font-size: 13px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  padding: 4px 6px;
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.nav-link:hover {
+  border-color: white;
+}
+
+.hamburger-btn {
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .hamburger-btn {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #232f3e;
+    width: 100%;
+    padding: 8px 0;
+    z-index: 40;
+  }
+  .nav-links-open {
+    display: flex;
+  }
+  .nav-link {
+    font-size: 13px;
+    padding: 10px 16px;
+    width: 100%;
+  }
+}

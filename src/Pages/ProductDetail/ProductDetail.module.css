@@ -1,0 +1,114 @@
+.detail__container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  display: grid;
+  grid-template-columns: 350px 1fr 300px;
+  gap: 24px;
+}
+
+.image__section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.stars {
+  color: #ffa41c;
+  font-size: 16px;
+}
+
+.ratingCount {
+  font-size: 13px;
+  color: #007185;
+}
+
+.category {
+  font-size: 14px;
+  color: #555;
+  text-transform: capitalize;
+  margin-bottom: 12px;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.buy__section {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  height: fit-content;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.inStock {
+  color: green;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.addToCart,
+.buyNow {
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  border: 1px solid #a88734;
+}
+
+.addToCart {
+  background-color: #ffd814;
+}
+
+.addToCart:hover {
+  background-color: #f7ca00;
+}
+
+.buyNow {
+  background-color: #ffa41c;
+}
+
+.buyNow:hover {
+  background-color: #fa8900;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px;
+  font-size: 18px;
+}
+
+@media (max-width: 900px) {
+  .detail__container {
+    grid-template-columns: 1fr;
+  }
+}

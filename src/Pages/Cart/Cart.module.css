@@ -1,0 +1,93 @@
+.cart__section {
+  display: flex;
+  gap: 24px;
+  max-width: 1500px;
+  margin: 20px auto;
+  padding: 0 16px;
+  align-items: flex-start;
+}
+
+.cart__left {
+  flex: 3;
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.cart__left h2 {
+  margin: 0;
+}
+
+.cart__left h3 {
+  font-weight: normal;
+  margin: 4px 0 12px 0;
+}
+
+.cart__right {
+  flex: 1;
+  background: white;
+  border-radius: 6px;
+  padding: 16px;
+  position: sticky;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart__right p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.cart__right span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.cart__right a {
+  text-align: center;
+  background-color: #ffd814;
+  border: 1px solid #a88734;
+  border-radius: 20px;
+  padding: 8px 0;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.cart__right a:hover {
+  background-color: #f7ca00;
+}
+.cart__cardContainer {
+  position: relative;
+}
+
+.cart__quantity {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.cart__quantity svg {
+  cursor: pointer;
+  font-size: 22px;
+  color: #565959;
+}
+
+.cart__quantity svg:hover {
+  color: #e77600;
+}
+
+.cart__quantity p {
+  margin: 2px 0;
+  font-size: 14px;
+  font-weight: bold;
+}
