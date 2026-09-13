@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export const axiosInstance = axios.create({
-  baseURL: 'http://localhost:8080'
+  baseURL: "https://amazon-clone-backend-2nak.onrender.com"
 })
